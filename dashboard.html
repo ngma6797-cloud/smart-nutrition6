@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>موقع النجم التعليمي</title>
+</head>
+<body>
+
+<h1>موقع النجم التعليمي</h1>
+<p>مرحبا بك داخل المنصة</p>
+
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
