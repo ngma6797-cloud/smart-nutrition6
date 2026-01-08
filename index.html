@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+</head>
+<body>
+
+<h2>مرحبًا بك</h2>
+<button onclick="login()">دخول</button>
+
+<script>
+  // رسالة الترحيب الأولى
+  window.onload = function () {
+    speak("من فضلك اضغط على كلمة دخول");
+  };
+
+  function speak(text) {
+    let msg = new SpeechSynthesisUtterance(text);
+    msg.lang = "ar-SA";
+    speechSynthesis.speak(msg);
+  }
+
+  function login() {
+    localStorage.setItem("loggedIn", "true");
+    speak("أهلاً وسهلاً، موقع النجم التعليمي");
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
